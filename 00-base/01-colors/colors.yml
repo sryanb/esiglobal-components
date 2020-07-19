@@ -1,0 +1,11 @@
+palettes:
+  - palette_heading: 'Default'
+    colors:
+      - name: 'Text'
+      - name: 'Background'
+      - name: 'Primary'
+      - name: 'Secondary'
+      - name: 'Accent'
+      - name: 'Warning'
+      - name: 'Error'
+      - name: 'Message'

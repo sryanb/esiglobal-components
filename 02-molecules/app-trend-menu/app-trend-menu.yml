@@ -1,0 +1,40 @@
+menus:
+  - vertical_menu_title: "EV/Powertrain"
+    vertical_menu_items:
+    - title: "(ICE) Powertrain"
+      url: "#"
+    - title: "Electric Vehicle"
+      url: "#"
+  - vertical_menu_title: "Safety Systems (ADAS)"
+    vertical_menu_items:
+    - title: "Unique Substrates"
+      url: "#"
+    - title: "Enhanced Reliability"
+      url: "#"
+    - title: "Miniaturization"
+      url: "#"
+  - vertical_menu_title: "Interior"
+    vertical_menu_items:
+    - title: "Displays"
+      url: "#"
+    - title: "3D Electronics"
+      url: "#"
+    - title: "Printed inks"
+      url: "#"
+  - vertical_menu_title: "Exterior"
+    vertical_menu_items:
+    - title: "Environmental"
+      url: "#"
+    - title: "Advanced Electronics"
+      url: "#"
+    - title: "Functional Surfaces"
+      url: "#"
+  - vertical_menu_title: "Lightweighting"
+    vertical_menu_items:
+    - title: "Lorem Ipsum Dolor"
+      url: "#"
+    - title: "Dolor Semit"
+      url: "#"
+    - title: "Placeholder Item"
+      url: "#"
+

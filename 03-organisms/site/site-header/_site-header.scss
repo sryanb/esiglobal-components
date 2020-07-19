@@ -1,0 +1,105 @@
+/** Header Top **/
+.header-top {
+  display: none;
+
+  @include medium {
+    display: block;
+  }
+
+  &__inner {
+    @include wrapper;
+
+    padding: $space-one-half $space;
+    background: clr(primary-dark);
+    display: flex;
+    justify-content: flex-end;
+  }
+}
+
+/** Header Main **/
+$header-menu-breakpoint: 1220px;
+
+.header {
+  position: relative;
+
+  &__inner {
+    background: clr(primary);
+    display: flex;
+    flex-flow: column nowrap;
+  }
+
+  &__primary {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    padding: $space;
+    align-items: center;
+
+    @include medium {
+      padding: $space $space-double;
+    }
+  }
+
+  &__branding {
+    margin-right: $space;
+    max-width: 195px;
+    width: 140px;
+
+    @include medium {
+      width: auto;
+    }
+  }
+
+  &__menu {
+    display: none;
+
+    @include breakpoint($header-menu-breakpoint) {
+      display: block;
+    }
+  }
+
+  &__actions {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+    &__icon {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  &__search-icon {
+    width: 21px;
+    height: 22px;
+    margin-right: $space;
+  }
+
+  &__menu-icon {
+    width: 33px;
+    height: 22px;
+  }
+}
+
+.mobile-menu {
+  visibility: hidden;
+  opacity: 0;
+  position: absolute;
+  width: 100%;
+  background: rgba(1, 62, 108, 1);
+  top: 100%;
+  z-index: 10;
+  border-top: 1px solid $darkblue;
+  transition: all 0.3s;
+  height: calc(100vh - 70px);
+  max-height: 800px;
+
+  &--open {
+    visibility: visible;
+    opacity: 1;
+  }
+
+  &__inner {
+    padding: $space-quadruple $space-double;
+  }
+}

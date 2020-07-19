@@ -1,0 +1,61 @@
+.text-with-media {
+  $self: &;
+
+  @include margin;
+
+  @include large {
+    display: flex;
+    align-items: center;
+  }
+
+  @include xl {
+    align-items: flex-end;
+  }
+
+  &__media {
+    width: 100%;
+    margin-right: $space-quadruple;
+    margin-bottom: $space-double;
+
+    @include large {
+      width: 50%;
+      flex-shrink: 0;
+      margin-bottom: 0;
+    }
+  }
+
+  &__text {
+   border-top: 10px solid $blue;
+   padding-top: $space;
+
+    h2 {
+      margin-top: 0;
+    }
+
+    p:first-child {
+      margin-top: 0;
+    }
+
+    p:last-child {
+      margin-bottom: $space-double;
+    }
+  }
+
+  &__link {
+    @include button-base;
+
+    margin-bottom: 0;
+  }
+
+  &--reverse {
+    #{$self}__media {
+      order: 2;
+      margin-right: 0;
+      margin-left: $space-quadruple;
+    }
+
+    #{$self}__text {
+      order: 1;
+    }
+  }
+}

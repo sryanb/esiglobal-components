@@ -1,0 +1,5 @@
+text_with_media_src: "https://placeimg.com/740/425"
+text_with_media_alt: "This is the alt text"
+text_with_media_text:
+  "<h2>This is the Text With Media component. It can contain various basic text markup such as this heading and paragraph.</h2><p>Vestibulum id ligula porta felis euismod semper. Curabitur blandit tempus porttitor. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Sed posuere consectetur est at lobortis.</p>"
+text_with_media_link_text: 'Click Me'

@@ -1,0 +1,46 @@
+.newsletter-cta {
+  padding: $space-double $space;
+  text-align: center;
+  width: 100%;
+  background: #DBDBDB url('../components/02-molecules/newsletter-cta/bg-newsletter.png');
+
+  @include medium {
+    padding: $space-quadruple;
+  }
+
+  label {
+    @include visually-hidden;
+  }
+
+  form {
+    @include medium {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    // Drupal specific
+    .form-item {
+      margin-bottom: 0;
+    }
+
+    input[type="email"] {
+      width: 100%;
+      padding: 1.3rem;
+
+      @include medium {
+        max-width: 32em;
+      }
+    }
+
+    input[type="submit"] {
+      background: $black;
+      clip-path: none;
+      width: 100%;
+
+      @include medium {
+        width: 200px;
+      }
+    }
+  }
+}

@@ -1,0 +1,9 @@
+{% embed "@templates/full-width.twig" %}
+  {% block page_content %}
+    {% include "@molecules/cta/cta.twig" with {
+      cta_heading: 'Here\'s a cool thing!',
+      cta_button_text: 'Click me!',
+    } %}
+  {% endblock %}
+
+{% endembed %}

@@ -1,0 +1,61 @@
+.featured-news-grid {
+  @include margin;
+
+  display: flex;
+  flex-flow: wrap;
+
+  @include large {
+    justify-content: space-between;
+  }
+
+  @include xl {
+    @include margin($space-quadruple);
+
+    margin-left: -$space;
+    margin-right: -$space;
+  }
+
+  > div {
+    margin-bottom: $space;
+
+    @include xl {
+      flex: auto;
+      margin: $space;
+    }
+
+    &:first-child {
+      width: 100%;
+      margin-top: 0;
+    }
+
+    &:nth-child(2),
+    &:nth-child(3) {
+      width: 100%;
+
+      @include large {
+        width: 49%;
+      }
+
+      @include xl {
+        flex: auto;
+        width: 45%;
+      }
+    }
+
+    &:nth-child(4),
+    &:nth-child(5),
+    &:last-child {
+      width: 100%;
+
+      @include large {
+        width: 32%;
+        margin-bottom: 0;
+      }
+
+      @include xl {
+        flex: auto;
+        width: 30%;
+      }
+    }
+  }
+}

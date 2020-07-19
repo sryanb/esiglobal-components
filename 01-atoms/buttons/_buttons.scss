@@ -1,0 +1,72 @@
+@mixin button-base {
+  display: block;
+  width: 210px;
+  height: 60px;
+  line-height: 60px;
+  text-align: center;
+  font-size: 1rem;
+  text-decoration: none;
+  text-transform: uppercase;
+  margin: $space 0;
+  background: clr(primary);
+  color: clr(text-inverse);
+  border: none;
+  clip-path: polygon(8% 0, 92% 0, 100% 50%, 92% 100%, 8% 100%, 0% 50%);
+  transition: background 0.2s;
+
+  &:hover {
+    cursor: pointer;
+    background: clr(primary-dark);
+  }
+}
+
+@mixin secondary {
+  color: clr(text-inverse);
+  background: clr(secondary);
+
+  &:hover {
+    background: clr(secondary-dark);
+    color: clr(text-inverse);
+  }
+}
+
+@mixin outline {
+  position: relative;
+  background: $white;
+  z-index: 1;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 1px;
+    left: 1px;
+    display: block;
+    background: $black;
+    width: 208px;
+    height: 58px;
+    clip-path: polygon(8% 0, 92% 0, 100% 50%, 92% 100%, 8% 100%, 0% 50%);
+    z-index: -1;
+    color: clr(text-inverse);
+    transition: background 0.2s;
+  }
+
+  &:hover {
+    background: $white;
+
+    &::before {
+      background: $gray-darker;
+    }
+  }
+}
+
+.button {
+  @include button-base;
+
+  &--secondary {
+    @include secondary;
+  }
+
+  &--outline-white {
+    @include outline;
+  }
+}

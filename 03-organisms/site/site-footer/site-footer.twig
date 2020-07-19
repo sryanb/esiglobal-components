@@ -1,0 +1,61 @@
+{% set footer__base_class = 'footer' %}
+
+{% set footer__logo_src = directory ? '/' ~ directory ~ '/images/logo.png' : footer__logo_src|default('http://esiauto.lndo.site/themes/custom/esitheme/images/logo.png') %}
+
+<footer {{ bem(footer__base_class) }}>
+  <div {{ bem('inner', [], footer__base_class) }}>
+    <div {{ bem('branding', [], footer__base_class) }}>
+      {% block footer__branding %}
+        {% embed "@atoms/links/link/link.twig" with {
+          link_base_class: 'logo-link',
+          link_url: logo_link__url|default('/'),
+        } %}
+          {% block link_content %}
+            {% include "@atoms/images/image/responsive-image.twig" with {
+              output_image_tag: true,
+              image_src: footer__logo_src,
+              image_alt: 'Logo',
+              responsive_image_blockname: 'logo',
+            } %}
+          {% endblock %}
+        {% endembed %}
+      {% endblock %}
+    </div>
+    <div {{ bem('menus', [], footer__base_class) }}>
+      {% block footer__menus %}
+        {# Applications #}
+        {% include "@molecules/menus/vertical-menu/vertical-menu.twig" with {
+          vertical_menu_title: site_footer_application_menu_title,
+          vertical_menu_items: site_footer_application_menu_items,
+          vertical_menu_modifiers: ['inverse']
+        } %}
+        {# Company #}
+        {% include "@molecules/menus/vertical-menu/vertical-menu.twig" with {
+          vertical_menu_title: site_footer_company_menu_title,
+          vertical_menu_items: site_footer_company_menu_items,
+          vertical_menu_modifiers: ['inverse']
+        } %}
+      {% endblock %}
+    </div>
+    <div {{ bem('info', [], footer__base_class) }}>
+      {% block footer__info %}
+        <div {{ bem('phone', [], footer__base_class) }}><a href="tel://11234567890">+1 (123) 456-7890</a></div>
+        <div {{ bem('email', [], footer__base_class) }}><a href="mailto:info@esiautomotive.com">info@esiautomotive.com</a></div>
+        <div {{ bem('copy', [], footer__base_class) }}>Copyright &copy; esi automotive {{ "now"|date("Y") }} Carabitur blandit tempus portitor. Duis mollis,
+  est non comodo luctus.</div>
+      {% endblock %}
+    </div>
+  </div>
+</footer>
+
+<div {{ bem('bottom', [], footer__base_class)}}>
+  {% block footer_sub_menu %}
+  {% endblock %}
+
+  {% include "@atoms/text/headings/_heading.twig" with {
+    heading_level: 4,
+    heading: site_footer__slogan|default("Powered by Innovation"),
+    heading_base_class: 'slogan',
+    heading_blockname: footer__base_class
+  } %}
+</div>

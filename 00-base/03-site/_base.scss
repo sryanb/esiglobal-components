@@ -1,0 +1,27 @@
+html {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: clr(background);
+  color: clr(text);
+
+  @include body-copy;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+
+.main {
+  @include wrapper;
+
+  display: block; /* Fix for IE weirdness */
+  margin-bottom: 0 !important
+}
+
+.visually-hidden {
+  @include visually-hidden;
+}

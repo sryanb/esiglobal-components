@@ -1,0 +1,21 @@
+.teaser {
+  width: 600px;
+  margin-bottom: $space-double;
+
+  &__header {
+    padding: 5px;
+    background: #ccc;
+  }
+
+  &__body {
+    padding: 5px;
+  }
+
+  &--red {
+    background-color: red;
+  }
+
+  &--blue {
+    background-color: blue;
+  }
+}

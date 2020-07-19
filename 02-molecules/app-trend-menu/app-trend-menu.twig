@@ -1,0 +1,13 @@
+{% set app_trend_menu_base_class = app_trend_menu_base_class|default("app-trend-menu") %}
+
+<div {{ bem(app_trend_menu_base_class, (app_trend_menu_modifiers), app_trend_menu_blockname)}}>
+  {% block menu %}
+    {% for menu in menus %}
+      {% include '@molecules/menus/vertical-menu/vertical-menu.twig' with {
+        vertical_menu_title: menu.vertical_menu_title,
+        vertical_menu_items: menu.vertical_menu_items,
+        vertical_menu_modifiers: ['underlines', 'inverse']
+      } %}
+    {% endfor %}
+  {% endblock %}
+</div>

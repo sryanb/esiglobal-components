@@ -1,0 +1,63 @@
+{% set header__base_class = 'header' %}
+{% set mobile_menu_base_class = mobile_menu_base_class|default("mobile-menu") %}
+
+{% set header__burger_menu = header__burger_menu ?? false %}
+{% set header__search_icon = header__search_icon ?? false %}
+
+{# If `directory` is defined, set the path relative for Drupal.
+ # Otherwise, set the path relative to the Component Library. #}
+{% set header__logo_src = directory ? '/' ~ directory ~ '/images/logo.png' : header__logo_src|default('http://esiauto.lndo.site/themes/custom/esitheme/images/logo.png') %}
+
+<header {{ bem(header__base_class) }}>
+  <div {{ bem('inner', [], header__base_class) }}>
+    <div {{ bem('primary', [], header__base_class) }}>
+      <div {{ bem('branding', [], header__base_class) }}>
+        {% block header__branding %}
+          {% embed "@atoms/links/link/link.twig" with {
+            link_base_class: 'logo-link',
+            link_url: logo_link__url|default('/'),
+          } %}
+            {% block link_content %}
+              {% include "@atoms/images/image/responsive-image.twig" with {
+                output_image_tag: true,
+                image_src: header__logo_src,
+                image_alt: 'Logo',
+                responsive_image_blockname: 'logo',
+              } %}
+            {% endblock %}
+          {% endembed %}
+        {% endblock %}
+      </div>
+      <div {{ bem('menu', [], header__base_class) }}>
+        {% block header__menu %}
+          {% include "@molecules/menus/main-menu/main-menu.twig" %}
+        {% endblock %}
+      </div>
+
+      <div {{ bem('actions', [], header__base_class) }}>
+        {% if header__search_icon %}
+          <div {{ bem('search-icon', [], header__base_class)}}>
+            {% include "@atoms/images/icons/_icon.twig" with {
+              icon_name: 'search',
+              icon_blockname: 'header__actions',
+            } %}
+          </div>
+        {% endif %}
+        {% if header__burger_menu %}
+          <div {{ bem('menu-icon', [], header__base_class)}}>
+            {% include "@atoms/hamburger/hamburger.twig" %}
+          </div>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+
+  <div {{ bem(mobile_menu_base_class, mobile_menu_modifiers, mobile_menu_blockname) }}>
+    <div {{ bem('inner', mobile_menu_inner_modifiers, mobile_menu_base_class) }}>
+      {% block mobile_menu_content %}
+        {% include "@molecules/app-trend-menu/app-trend-menu.twig" %}
+      {% endblock %}
+    </div>
+  </div>
+
+</header>

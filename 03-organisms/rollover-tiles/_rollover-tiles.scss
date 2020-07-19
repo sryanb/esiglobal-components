@@ -1,0 +1,24 @@
+.rollover-tiles {
+
+  @include medium {
+    @include margin($space-quadruple);
+
+    display: flex;
+    margin-left: -$space-one-half;
+    margin-right: -$space-one-half;
+
+    > div {
+      flex: auto;
+      margin: 0 $space-one-half;
+    }
+  }
+
+  @include large {
+    margin-left: -$space;
+    margin-right: -$space;
+
+    > div {
+      margin: 0 $space;
+    }
+  }
+}

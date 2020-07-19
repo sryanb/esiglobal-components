@@ -1,0 +1,9 @@
+{% set header_top__base_class = 'header-top' %}
+
+<div {{ bem(header_top__base_class) }}>
+  <div {{ bem('inner', [], header_top__base_class) }}>
+    {% block header_top__menu %}
+      {% include "@molecules/menus/secondary-menu/secondary-menu.twig" %}
+    {% endblock %}
+  </div>
+</div>

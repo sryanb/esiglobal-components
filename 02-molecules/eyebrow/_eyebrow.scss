@@ -1,0 +1,21 @@
+.eyebrow {
+  font-size: 1rem;
+
+  &__date {
+    display: inline-block;
+    color: $gray-lighter;
+    margin-right: $space-one-half;
+    padding-right: $space-one-half;
+    border-right: 1px solid $gray-lighter;
+    line-height: 1rem;
+  }
+
+  &__type {
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+
+  a {
+    @include link(clr(text-inverse), clr(accent));
+  }
+}

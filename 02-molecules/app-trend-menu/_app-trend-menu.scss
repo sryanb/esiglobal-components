@@ -1,0 +1,38 @@
+.app-trend-menu {
+  padding: $space 0;
+
+  > div {
+    // Hide list items on mobile since they will be toggle-able.
+    ul {
+      display: none;
+      margin-bottom: $space-double;
+
+      @include large {
+        display: block;
+      }
+    }
+  }
+
+  @include large {
+    display: flex;
+    flex-wrap: wrap;
+
+    > div {
+      flex: 1;
+      padding: 0 $space;
+      margin-bottom: 0;
+
+      &:first-child {
+        padding-left: 0;
+      }
+
+      &:last-child {
+        padding-right: 0;
+      }
+    }
+  }
+
+  @include xl {
+    flex-wrap: nowrap;
+  }
+}

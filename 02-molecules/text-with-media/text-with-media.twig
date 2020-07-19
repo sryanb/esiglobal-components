@@ -1,0 +1,40 @@
+{% set text_with_media_base_class_var = text_with_media_base_class|default('text-with-media') %}
+
+{% if text_with_media_modifiers is empty %}
+  {% set text_with_media_modifiers = [] %}
+{% endif %}
+
+{% if text_with_media_direction == "Media Right" %}
+  {% set text_with_media_modifiers = text_with_media_modifiers|merge(['reverse']) %}
+{% endif %}
+
+<div {{ bem(text_with_media_base_class_var, text_with_media_modifiers, text_with_media_blockname, text_with_media_extra_classes) }}>
+  <div {{ bem('media', text_with_media_media_modifiers, text_with_media_base_class_var) }}>
+    {% block media %}
+      {% include "@atoms/images/image/responsive-image.twig" with {
+        image_src: text_with_media_src,
+        responsive_image_base_class: 'image',
+        responsive_image_blockname: text_with_media_base_class_var
+      } %}
+    {% endblock %}
+  </div>
+  <div {{ bem('text', [], text_with_media_base_class_var) }}>
+    {% block text %}
+      {% include "@atoms/text/text/_text.twig" with {
+        text_base_class: "text-block",
+        text_blockname: text_with_media_base_class_var,
+        text_content: text_with_media_text,
+      } %}
+    {% endblock %}
+
+    {% if text_with_media_link_text is not empty %}
+      {% include "@atoms/links/link/link.twig" with {
+        link_url: text_with_media_link_url,
+        link_content: text_with_media_link_text,
+        link_modifiers: link_modifiers|default(['secondary']),
+        link_base_class: "link",
+        link_blockname: text_with_media_base_class_var
+      } %}
+    {% endif %}
+  </div>
+</div>

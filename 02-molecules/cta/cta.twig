@@ -1,0 +1,27 @@
+{% set cta_base_class = 'cta' %}
+
+{% if 'secondary' in cta_modifiers or 'secondary-light' in cta_modifiers %}
+  {% set link_modifiers = ['primary']%}
+{% endif %}
+
+<div {{ bem(cta_base_class, cta_modifiers, cta_blockname, cta_extra_classes) }}>
+  <div {{ bem('text', [], cta_base_class) }}>
+    {% include "@atoms/text/headings/_heading.twig" with {
+      heading_level: 2,
+      heading: cta_heading,
+      heading_blockname: cta_base_class
+    } %}
+
+    {% include "@atoms/text/text/01-paragraph.twig" with {
+      paragraph_content: cta_subheading
+    } %}
+  </div>
+
+  {% include "@atoms/links/link/link.twig" with {
+    link_url: cta_link_url,
+    link_content: cta_link_text,
+    link_modifiers: link_modifiers|default(['secondary']),
+    link_base_class: "link",
+    link_blockname: cta_base_class
+  } %}
+</div>

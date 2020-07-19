@@ -1,0 +1,56 @@
+{% set featured_grid_item_base_class = featured_grid_item_base_class|default('featured-grid-item') %}
+
+{% if not featured_grid_item_modifiers %}
+  {% set featured_grid_item_modifiers = [] %}
+{% endif %}
+
+{% if featured_item %}
+  {% set featured_grid_item_modifiers = featured_grid_item_modifiers|merge(['featured']) %}
+{% endif %}
+
+<div {{ bem(featured_grid_item_base_class, featured_grid_item_modifiers, featured_grid_item_blockname) }}>
+  <div {{ bem('info', featured_grid_item_modifiers, featured_grid_item_base_class) }}>
+    {{ title_prefix }}
+
+    {% include "@molecules/eyebrow/eyebrow.twig" with {
+      eyebrow_date: item_date,
+      eyebrow_type: item_type
+    } %}
+
+    {% include "@atoms/text/headings/_heading.twig" with {
+      heading_level: 2,
+      heading: item_title,
+      heading_url: item_url,
+      heading_blockname: featured_grid_item_base_class,
+      heading_base_class: "title",
+      heading_modifiers: featured_grid_item_modifiers
+    } %}
+
+    {{ title_suffix }}
+
+    {% if featured_item %}
+      {% block description %}
+        {% include "@atoms/text/text/01-paragraph.twig" with {
+          paragraph_content: item_description,
+          paragraph_blockname: featured_grid_item_base_class
+        } %}
+      {% endblock %}
+    {% endif %}
+
+    {% if featured_item %}
+      <a class="button button--outline-white" href="{{ item_url }}">{{ item_link_text}} </a>
+    {% endif %}
+  </div>
+
+  <div {{ bem('gradient', featured_grid_item_modifiers, featured_grid_item_base_class) }}></div>
+
+  <div {{ bem('image', [], featured_grid_item_base_class) }}>
+    {% block image %}
+      {% include "@atoms/images/image/responsive-image.twig" with {
+        output_image_tag: true,
+        image_src: item_image_src,
+        responsive_image_blockname: 'image',
+      } %}
+    {% endblock %}
+  </div>
+</div>

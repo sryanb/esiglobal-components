@@ -1,0 +1,12 @@
+@mixin link($color: clr(accent), $hover-color: clr(accent-high)) {
+  color: $color;
+  text-decoration: none;
+
+  &:hover {
+    color: $hover-color;
+  }
+}
+
+.link {
+  @include link;
+}

@@ -1,0 +1,69 @@
+.cta {
+  $self: &;
+
+  @include margin;
+
+  clip-path: polygon(66% 5%, 100% 0, 100% 100%, 0 100%, 0 0);
+  padding: $space-quadruple $space $space-double;
+  background-color: clr(primary);
+  color: clr(text-inverse);
+  text-align: center;
+
+  @include xl {
+    clip-path: polygon(66% 14%, 100% 0, 100% 100%, 0 100%, 0 0);
+    display: flex;
+    align-items: flex-end;
+    padding: $space-triple;
+    text-align: left;
+  }
+
+  &__text {
+
+    @include xl {
+      flex: 1;
+      margin-right: $space-double;
+    }
+
+    p {
+      @include xl {
+        width: 70%;
+      }
+    }
+  }
+
+  &__h2 {
+    font-size: 2rem;
+    margin: 0 0 $space 0;
+  }
+
+  &__link {
+    @include button-base;
+
+    margin: $space-double auto;
+
+    @include xl {
+      margin: 0;
+    }
+
+    &--secondary {
+      @include secondary;
+    }
+  }
+
+  &--secondary {
+    background-color: clr(secondary);
+  }
+
+  &--secondary-light {
+    background-color: clr(secondary-light);
+    color: clr(text);
+  }
+
+  &--flipped {
+    clip-path: polygon(100% 0, 100% 100%, 66% 97%, 0 100%, 0 0);
+
+    @include xl {
+      clip-path: polygon(100% 0, 100% 100%, 66% 86%, 0 100%, 0 0);
+    }
+  }
+}

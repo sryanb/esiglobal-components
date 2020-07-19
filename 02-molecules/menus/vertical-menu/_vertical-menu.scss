@@ -1,0 +1,57 @@
+.vertical-menu {
+  $self: &;
+
+  &__title {
+    margin-top: 0;
+  }
+
+  ul {
+    @include list-reset;
+
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+
+  li {
+    margin-bottom: 5px;
+  }
+
+  a {
+    display: block;
+    color: clr(text);
+    text-decoration: none;
+
+    &:hover {
+      color: clr(accent);
+    }
+  }
+
+  // Inverse modifier.
+  &--inverse {
+    #{$self}__title {
+      color: clr(text-inverse);
+    }
+
+    a {
+      color: clr(text-inverse);
+
+      &:hover {
+        color: $gray-lighter;
+      }
+    }
+  }
+
+  // Underlines Modifier.
+  &--underlines {
+    a {
+      border-bottom: 1px solid $gray;
+      padding: 5px 0;
+    }
+
+    h3 a {
+      border-bottom: none;
+      padding: 0;
+    }
+  }
+}

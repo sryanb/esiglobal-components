@@ -1,0 +1,10 @@
+rollover_tiles:
+  - image: "https://placeimg.com/460/320/tech"
+    title: "Style"
+    description: "Description goes here"
+  - image: "https://placeimg.com/460/320/nature"
+    title: "Function"
+    description: "Description goes here"
+  - image: "https://placeimg.com/460/320/animals"
+    title: "Reliability"
+    description: "Description goes here"

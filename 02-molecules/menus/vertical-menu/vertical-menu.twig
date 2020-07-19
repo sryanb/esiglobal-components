@@ -1,0 +1,20 @@
+{% set vertical_menu_base_class = "vertical-menu" %}
+
+<div {{ bem(vertical_menu_base_class, vertical_menu_modifiers, vertical_menu_blockname) }}>
+  {% if vertical_menu_title %}
+    {% include "@atoms/text/headings/_heading.twig" with {
+      heading_level: 3,
+      heading: vertical_menu_title,
+      heading_base_class: "title",
+      heading_blockname: vertical_menu_base_class
+    } %}
+  {% endif %}
+
+  {% block vertical_menu_items %}
+    <ul>
+      {% for item in vertical_menu_items %}
+        <li><a href="{{ item.url }}">{{ item.title }}</a></li>
+      {% endfor %}
+    </ul>
+  {% endblock %}
+</div>
