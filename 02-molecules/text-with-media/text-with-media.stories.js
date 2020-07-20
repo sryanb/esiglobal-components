@@ -8,7 +8,7 @@ import textWithMediaReversedData from './text-with-media~reverse.yml';
 /**
  * Storybook Definition.
  */
-export default { title: 'Molecules/Text with Media' };
+export default { title: 'Element Solutions/Molecules/Text with Media' };
 
 export const textWithMediaExample = () => (
   <div

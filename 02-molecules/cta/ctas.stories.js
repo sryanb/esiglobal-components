@@ -10,7 +10,7 @@ import ctaFlippedData from './cta~flipped.yml';
 /**
  * Storybook Definition.
  */
-export default { title: 'Molecules/CTA' };
+export default { title: 'Element Solutions/Molecules/CTA' };
 
 export const ctaPrimary = () => (
   <div dangerouslySetInnerHTML={{ __html: cta(ctaData) }} />

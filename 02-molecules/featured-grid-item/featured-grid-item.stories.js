@@ -8,7 +8,7 @@ import featuredItemNormalData from './featured-grid-item~featured.yml';
 /**
  * Storybook Definition.
  */
-export default { title: 'Molecules/Featured Grid Item' };
+export default { title: 'Element Solutions/Molecules/Featured Grid Item' };
 
 export const featuredItemFeatured = () => (
   <div

@@ -16,7 +16,7 @@ import './main-menu/main-menu';
 /**
  * Storybook Definition.
  */
-export default { title: 'Molecules/Menus' };
+export default { title: 'Element Solutions/Molecules/Menus' };
 
 export const breadcrumbs = () => (
   <div dangerouslySetInnerHTML={{ __html: breadcrumb(breadcrumbsData) }} />

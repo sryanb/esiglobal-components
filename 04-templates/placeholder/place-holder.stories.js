@@ -5,7 +5,7 @@ import placeHolderTwig from './place-holder.twig';
 /**
  * Storybook Definition.
  */
-export default { title: 'Templates/Place Holder' };
+export default { title: 'Element Solutions/Templates/Place Holder' };
 
 export const placeHolder = () => (
   <div dangerouslySetInnerHTML={{ __html: placeHolderTwig({}) }} />

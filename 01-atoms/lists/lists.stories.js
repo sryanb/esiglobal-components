@@ -11,7 +11,7 @@ import olData from './ol.yml';
 /**
  * Storybook Definition.
  */
-export default { title: 'Atoms/Lists' };
+export default { title: 'Element Solutions/Atoms/Lists' };
 
 export const definitionList = () => (
   <div dangerouslySetInnerHTML={{ __html: dl(dlData) }} />

@@ -16,7 +16,7 @@ import '../../02-molecules/menus/main-menu/main-menu';
 /**
  * Storybook Definition.
  */
-export default { title: 'Organisms/Site' };
+export default { title: 'Element Solutions/Organisms/Site' };
 
 export const headerTop = () => {
   return (

@@ -11,7 +11,7 @@ import iconData from './icons/icons.yml';
 /**
  * Storybook Definition.
  */
-export default { title: 'Atoms/Images' };
+export default { title: 'Element Solutions/Atoms/Images' };
 
 export const images = () => (
   <div dangerouslySetInnerHTML={{ __html: image(imageData) }} />

@@ -7,7 +7,7 @@ import heroData from './hero.yml';
 /**
  * Storybook Definition.
  */
-export default { title: 'Molecules/Hero' };
+export default { title: 'Element Solutions/Molecules/Hero' };
 
 export const heroExample = () => (
   <div dangerouslySetInnerHTML={{ __html: hero(heroData) }} />

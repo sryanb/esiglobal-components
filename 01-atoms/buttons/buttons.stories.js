@@ -9,7 +9,7 @@ import buttonOutlineWhiteData from './button~outline-white.yml';
 /**
  * Storybook Definition.
  */
-export default { title: 'Atoms/Button' };
+export default { title: 'Element Solutions/Atoms/Button' };
 
 export const buttonPrimarySolid = () => (
   <div dangerouslySetInnerHTML={{ __html: button(buttonData) }} />

@@ -5,7 +5,7 @@ import hamburgerTwig from './hamburger.twig';
 /**
  * Storybook Definition.
  */
-export default { title: 'Atoms/Hamburger' };
+export default { title: 'Element Solutions/Atoms/Hamburger' };
 
 export const hamburgerExample = () => (
   <div dangerouslySetInnerHTML={{ __html: hamburgerTwig({}) }} />

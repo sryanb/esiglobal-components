@@ -8,14 +8,8 @@ import gridCtaData from './grid-ctas.yml';
 /**
  * Storybook Definition.
  */
-export default { title: 'Organisms/Grids' };
+export default { title: 'Element Solutions/Organisms/Grids' };
 
 export const defaultGrid = () => (
   <div dangerouslySetInnerHTML={{ __html: grid(gridData) }} />
-);
-
-export const ctaGrid = () => (
-  <div
-    dangerouslySetInnerHTML={{ __html: grid({ ...gridData, ...gridCtaData }) }}
-  />
 );

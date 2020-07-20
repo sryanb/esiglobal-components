@@ -7,7 +7,7 @@ import rolloverTilesData from './rollover-tiles.yml';
 /**
  * Storybook Definition.
  */
-export default { title: 'Organisms/Rollover Tiles' };
+export default { title: 'Element Solutions/Organisms/Rollover Tiles' };
 
 export const rolloverTiles = () => (
   <div

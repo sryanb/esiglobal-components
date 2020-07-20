@@ -8,7 +8,7 @@ import footerMenus from '../03-organisms/site/site-footer/site-footer.yml';
 /**
  * Storybook Definition.
  */
-export default { title: 'Templates/Layouts' };
+export default { title: 'Element Solutions/Templates/Layouts' };
 
 export const fullWidth = () => (
   <div

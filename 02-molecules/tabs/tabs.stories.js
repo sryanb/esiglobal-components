@@ -10,7 +10,7 @@ import './tabs';
 /**
  * Storybook Definition.
  */
-export default { title: 'Molecules/Tabs' };
+export default { title: 'Element Solutions/Molecules/Tabs' };
 
 export const JSTabs = () => {
   useEffect(() => Drupal.attachBehaviors(), []);
