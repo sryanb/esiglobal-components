@@ -1,0 +1,22 @@
+{
+  "name": "esiglobal-components",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sryanb/esiglobal-components.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sryanb/esiglobal-components/issues"
+  },
+  "homepage": "https://github.com/sryanb/esiglobal-components#readme",
+  "devDependencies": {
+    "hamburgers": "^1.1.3"
+  }
+}
