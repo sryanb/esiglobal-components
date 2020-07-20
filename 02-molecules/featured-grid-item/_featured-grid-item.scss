@@ -73,11 +73,6 @@
       width: 343px;
       height: 109px;
       z-index: -1;
-
-      @include large {
-        background: transparent url("../components/02-molecules/featured-grid-item/esi-swoosh.png") no-repeat;
-        background-size: cover;
-      }
     }
   }
 

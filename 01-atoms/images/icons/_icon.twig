@@ -18,8 +18,6 @@
 {# IE 11 support for SVG use - remove if not needed.
 ## See also esitheme.libraries.yml to remove library.
 #}
-{{ attach_library('esitheme/sprite') }}
-
 <svg {{ bem(icon_base_class, icon_modifiers, icon_blockname, icon_extra_class) }}
 
   {% if icon_decorative %}

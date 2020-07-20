@@ -6,7 +6,7 @@
 
 {# If `directory` is defined, set the path relative for Drupal.
  # Otherwise, set the path relative to the Component Library. #}
-{% set header__logo_src = directory ? '/' ~ directory ~ '/images/logo.png' : header__logo_src|default('http://esiauto.lndo.site/themes/custom/esitheme/images/logo.png') %}
+{% set header__logo_src = directory ? '/' ~ directory ~ '/images/logo.png' : header__logo_src|default('../images/logo.png') %}
 
 <header {{ bem(header__base_class) }}>
   <div {{ bem('inner', [], header__base_class) }}>
