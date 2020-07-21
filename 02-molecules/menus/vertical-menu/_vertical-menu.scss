@@ -5,7 +5,7 @@
     margin-top: 0;
   }
 
-  &__ul {
+  ul {
     @include list-reset;
 
     display: flex;
@@ -18,12 +18,12 @@
     }
   }
 
-  &__list-item {
+  li {
     margin-bottom: 5px;
     padding-left: 0;
   }
 
-  &__link {
+  a {
     display: block;
     color: clr(text);
     text-decoration: none;
@@ -39,7 +39,7 @@
       color: clr(text-inverse);
     }
 
-    #{$self}__link {
+    a {
       color: clr(text-inverse);
 
       &:hover {

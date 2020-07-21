@@ -9,7 +9,7 @@
 {% endif %}
 
 <div {{ bem(vertical_menu_base_class, vertical_menu_modifiers, vertical_menu_blockname) }}>
-  {% if vertical_menu_title %}
+  {% block vertical_menu_title %}
     {% include "@atoms/text/headings/_heading.twig" with {
       heading_level: 3,
       heading: vertical_menu_title,
@@ -20,7 +20,7 @@
       heading_link_modifiers: vertical_menu_title_modifiers,
       heading_link_blockname: vertical_menu_base_class
     } %}
-  {% endif %}
+  {% endblock %}
 
   {% block vertical_menu_items %}
     {% embed "@atoms/lists/ul.twig" with {
