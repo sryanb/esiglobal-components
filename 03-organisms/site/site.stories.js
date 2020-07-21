@@ -13,6 +13,10 @@ import secondaryMenuData from '../../02-molecules/menus/secondary-menu/secondary
 
 import '../../02-molecules/menus/main-menu/main-menu';
 
+import exampleLogoPath from '../../images/placeholder-logo.png';
+
+// siteHeaderData.header__logo_src = "foo";
+
 /**
  * Storybook Definition.
  */
@@ -39,6 +43,7 @@ export const header = () => {
           ...breadcrumbData,
           ...mainMenuData,
           ...siteHeaderData,
+          ...exampleLogoPath,
         }),
       }}
     />

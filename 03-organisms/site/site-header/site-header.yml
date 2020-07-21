@@ -1,2 +1,3 @@
 header__burger_menu: true
 header__search_icon: false
+header__logo_src: "foo"
