@@ -1,6 +1,6 @@
 {% set footer__base_class = 'footer' %}
 
-{% set footer__logo_src = directory ? '/' ~ directory ~ '/images/logo.png' : footer__logo_src|default('../images/logo.png') %}
+{% set footer__logo_src = directory ? '/' ~ directory ~ '/images/logo.png' : footer__logo_src|default('./placeholder-logo.png') %}
 
 <footer {{ bem(footer__base_class) }}>
   <div {{ bem('inner', [], footer__base_class) }}>
