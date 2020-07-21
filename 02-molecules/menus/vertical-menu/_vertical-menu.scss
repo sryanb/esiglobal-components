@@ -5,19 +5,25 @@
     margin-top: 0;
   }
 
-  ul {
+  &__ul {
     @include list-reset;
 
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
+    margin-bottom: $space-double;
+
+    @include large {
+      margin-bottom: 0;
+    }
   }
 
-  li {
+  &__list-item {
     margin-bottom: 5px;
+    padding-left: 0;
   }
 
-  a {
+  &__link {
     display: block;
     color: clr(text);
     text-decoration: none;
@@ -27,13 +33,24 @@
     }
   }
 
+  // Collapsible
+  &--collapsible {
+    ul {
+      display: none;
+
+      @include large {
+        display: block;
+      }
+    }
+  }
+
   // Inverse modifier.
   &--inverse {
     #{$self}__title {
       color: clr(text-inverse);
     }
 
-    a {
+    #{$self}__link {
       color: clr(text-inverse);
 
       &:hover {
