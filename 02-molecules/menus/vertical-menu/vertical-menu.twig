@@ -8,11 +8,6 @@
   {% set vertical_menu_title_modifiers = [] %}
 {% endif %}
 
-{% if vertical_menu_collapsible %}
-  {% set vertical_menu_modifiers = vertical_menu_modifiers|merge(['collapsible']) %}
-  {% set vertical_menu_title_modifiers = vertical_menu_title_modifiers|merge(['collapsible']) %}
-{% endif %}
-
 <div {{ bem(vertical_menu_base_class, vertical_menu_modifiers, vertical_menu_blockname) }}>
   {% if vertical_menu_title %}
     {% include "@atoms/text/headings/_heading.twig" with {

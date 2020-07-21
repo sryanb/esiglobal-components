@@ -33,17 +33,6 @@
     }
   }
 
-  // Collapsible
-  &--collapsible {
-    ul {
-      display: none;
-
-      @include large {
-        display: block;
-      }
-    }
-  }
-
   // Inverse modifier.
   &--inverse {
     #{$self}__title {
