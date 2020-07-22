@@ -13,12 +13,13 @@
     {% include "@atoms/text/headings/_heading.twig" with {
       heading_level: 3,
       heading: vertical_menu_title,
-      heading_base_class: "title",
+      heading_base_class: "handle",
       heading_blockname: vertical_menu_base_class,
       heading_modifiers: vertical_menu_title_modifiers,
       heading_url: "#",
       heading_link_modifiers: vertical_menu_title_modifiers,
-      heading_link_blockname: vertical_menu_base_class
+      heading_link_blockname: vertical_menu_base_class,
+      heading_collapsible: vertical_menu_collapsible
     } %}
   {% endblock %}
 

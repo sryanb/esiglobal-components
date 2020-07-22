@@ -193,3 +193,29 @@ $color-heading: clr(text);
     @extend .h6;
   }
 }
+
+.handle {
+  &__toggle {
+    padding: 10px;
+    margin-right: $space;
+    margin-left: $space;
+    display: block;
+    border: solid white;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+    transform-origin: 65% 65%;
+    z-index: 2;
+
+    @include large {
+      display: none;
+    }
+
+    &:hover {
+      cursor: pointer;
+    }
+
+    &--open {
+      transform: rotate(-135deg);
+    }
+  }
+}
