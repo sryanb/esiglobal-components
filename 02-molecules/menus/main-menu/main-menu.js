@@ -1,12 +1,16 @@
-Drupal.behaviors.mainMenu = {
-  attach(context) {
-    const hamburger = context.querySelector('.hamburger');
-    const menuOverlay = context.querySelector('.mobile-menu');
+($ => {
+  Drupal.behaviors.mainMenu = {
+    attach() {
+      var $hamburger = $('.hamburger');
+      var $menuOverlay = $('.mobile-menu');
 
-    hamburger.addEventListener('click', e => {
-      hamburger.classList.toggle('is-active');
-      menuOverlay.classList.toggle('mobile-menu--open');
-      e.preventDefault();
-    });
-  },
-};
+      if ($hamburger.length > 0) {
+        $hamburger.once().click(function() {
+          $(this).toggleClass('is-active');
+          $('.mobile-menu').toggleClass('mobile-menu--open');
+        });
+      }
+    },
+  };
+})(jQuery);
+
