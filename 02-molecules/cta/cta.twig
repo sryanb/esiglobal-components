@@ -17,11 +17,13 @@
     } %}
   </div>
 
-  {% include "@atoms/links/link/link.twig" with {
-    link_url: cta_link_url,
-    link_content: cta_link_text,
-    link_modifiers: link_modifiers|default(['secondary']),
-    link_base_class: "link",
-    link_blockname: cta_base_class
-  } %}
+  {% if cta_link_text is not empty %}
+    {% include "@atoms/links/link/link.twig" with {
+      link_url: cta_link_url,
+      link_content: cta_link_text,
+      link_modifiers: link_modifiers|default(['secondary']),
+      link_base_class: "link",
+      link_blockname: cta_base_class
+    } %}
+  {% endif %}
 </div>

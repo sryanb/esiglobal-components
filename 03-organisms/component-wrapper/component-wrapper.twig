@@ -1,0 +1,6 @@
+{% set component_wrapper_base_class = component_wrapper_base_class|default('component-wrapper') %}
+
+<div {{ bem(component_wrapper_base_class, component_wrapper_modifiers, component_wrapper_blockname)}}>
+  {% block content %}
+  {% endblock %}
+</div>

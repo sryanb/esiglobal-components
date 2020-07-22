@@ -16,8 +16,12 @@
     @include large {
       flex-direction: row;
       height: auto;
-      padding: $space-quadruple;
+      padding: $space-quadruple 8rem;
     }
+  }
+
+  &--reverse {
+    justify-content: flex-start;
   }
 
   &__info {
@@ -73,6 +77,11 @@
       width: 343px;
       height: 109px;
       z-index: -1;
+
+      @include large {
+        background: transparent url("/esi-swoosh.png") no-repeat;
+        background-size: cover;
+      }
     }
   }
 
@@ -110,6 +119,10 @@
       @include large {
         background: linear-gradient(90deg, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 80%);
       }
+    }
+
+    &--reverse {
+      background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 80%);
     }
   }
 

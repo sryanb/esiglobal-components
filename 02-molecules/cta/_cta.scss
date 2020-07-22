@@ -17,6 +17,10 @@
     text-align: left;
   }
 
+  &--no-margin {
+    @include margin(0);
+  }
+
   &__text {
 
     @include xl {
