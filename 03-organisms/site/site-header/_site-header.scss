@@ -14,6 +14,10 @@
     display: flex;
     justify-content: flex-end;
   }
+
+  &__menu__link {
+    padding: 0.8rem 1rem;
+  }
 }
 
 /** Header Main **/

@@ -8,6 +8,10 @@
   {% set featured_grid_item_modifiers = featured_grid_item_modifiers|merge(['featured']) %}
 {% endif %}
 
+{% if reversed %}
+  {% set featured_grid_item_modifiers = featured_grid_item_modifiers|merge(['reverse']) %}
+{% endif %}
+
 <div {{ bem(featured_grid_item_base_class, featured_grid_item_modifiers, featured_grid_item_blockname) }}>
   <div {{ bem('info', featured_grid_item_modifiers, featured_grid_item_base_class) }}>
     {{ title_prefix }}
