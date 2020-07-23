@@ -1,6 +1,6 @@
 {% set eyebrow_base_class = eyebrow_base_class|default('eyebrow') %}
 
 <div {{ bem(eyebrow_base_class, eyebrow_modifiers, eyebrow_blockname) }}>
-  <span {{ bem('date', [], eyebrow_base_class) }}>{{ eyebrow_date }}</span>
-  <span {{ bem('type', [], eyebrow_base_class) }}>{{ eyebrow_type }}</span>
+  <span {{ bem('date', eyebrow_modifiers, eyebrow_base_class) }}>{{ eyebrow_date }}</span>
+  <span {{ bem('type', eyebrow_modifiers, eyebrow_base_class) }}>{{ eyebrow_type }}</span>
 </div>

@@ -1,4 +1,6 @@
 .eyebrow {
+  $self: &;
+
   font-size: 1rem;
 
   &__date {
@@ -17,5 +19,15 @@
 
   a {
     @include link(clr(text-inverse), clr(accent));
+  }
+
+  &--inverse {
+    #{$self}__date {
+      color: $gray;
+    }
+
+    #{$self}__type a {
+      @include link(clr(text), clr(accent));
+    }
   }
 }
