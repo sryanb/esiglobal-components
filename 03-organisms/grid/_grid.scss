@@ -1,6 +1,7 @@
 @mixin grid {
   display: flex;
   flex-wrap: wrap;
+  margin: -$space;
 }
 
 .grid {

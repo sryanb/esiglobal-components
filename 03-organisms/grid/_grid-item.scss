@@ -1,14 +1,14 @@
 @mixin grid-item {
-  flex: 1 1 100%;
-  margin-bottom: $space-double;
+  padding: $space;
+  display: flex;
+  flex-direction: column;
 
-  @include large {
-    margin: 0 $space-double 0 0;
-    flex-basis: 30%;
+  @include medium {
+    width: 50%;
   }
 
-  &:last-child {
-    margin-right: 0;
+  @include large {
+    width: 33.3333%;
   }
 }
 
