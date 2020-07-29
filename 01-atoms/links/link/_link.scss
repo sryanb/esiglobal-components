@@ -10,3 +10,13 @@
 .link {
   @include link;
 }
+
+.text-long {
+  a {
+    @include link;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
