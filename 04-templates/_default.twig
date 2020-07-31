@@ -12,19 +12,24 @@
     <a id="main-content" tabindex="-1"></a>{# link is in html.html.twig #}
 
     <main role="main" {{ bem(main_content_base_class, main_content_modifiers, main_content_blockname) }}>
-      {% block page_header_top %}
-        {% include "@organisms/site/site-header/site-header-top.twig" %}
-      {% endblock %}
+      <div {{ bem('site-top', [], main_content_base_class) }}>
+        {% block page_header_top %}
+          {% include "@organisms/site/site-header/site-header-top.twig" %}
+        {% endblock %}
 
-      {% block page_header %}
-        {% include "@organisms/site/site-header/site-header.twig" with {
-          header__burger_menu: true
-        } %}
-      {% endblock %}
+        {% block page_header %}
+          {% include "@organisms/site/site-header/site-header.twig" with {
+            header__burger_menu: true
+          } %}
+        {% endblock %}
+      </div>
+
       {% block page_system %}
       {% endblock %}
 
-      {% block page_content_top %}{% endblock %}
+      <div {{ bem('content-top', [], main_content_base_class) }}>
+        {% block page_content_top %}{% endblock %}
+      </div>
 
       <div {{ bem('content', [], main_content_base_class) }}>
         {% block page_content %}{% endblock %}
