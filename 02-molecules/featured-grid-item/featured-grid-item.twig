@@ -16,10 +16,12 @@
   <div {{ bem('info', featured_grid_item_modifiers, featured_grid_item_base_class) }}>
     {{ title_prefix }}
 
-    {% include "@molecules/eyebrow/eyebrow.twig" with {
-      eyebrow_date: item_date,
-      eyebrow_type: item_type
-    } %}
+    {% if item_date and item_type %}
+      {% include "@molecules/eyebrow/eyebrow.twig" with {
+        eyebrow_date: item_date,
+        eyebrow_type: item_type
+      } %}
+    {% endif %}
 
     {% include "@atoms/text/headings/_heading.twig" with {
       heading_level: 2,
