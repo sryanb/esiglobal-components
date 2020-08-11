@@ -1,0 +1,27 @@
+$footer_bottom_breakpoint: 1130px;
+
+.footer-logos {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: $space-double;
+
+  @include breakpoint($footer_bottom_breakpoint) {
+    padding: 0;
+    flex-direction: row;
+  }
+
+  &__logo {
+    margin-bottom: $space-double;
+    width: 220px;
+
+    @include breakpoint($footer_bottom_breakpoint) {
+      margin-bottom: 0;
+      margin-right: $space-quadruple;
+    }
+
+    &:first-child {
+      width: 150px;
+    }
+  }
+}

@@ -84,11 +84,17 @@
     }
   }
 
+  $footer_bottom_breakpoint: 1130px;
+
   &__bottom {
-    background: clr(primary-dark);
-    color: clr(text-inverse);
+    background: $white;
+    color: clr(text);
     padding: $space;
-    display: flex;
+
+    @include breakpoint($footer_bottom_breakpoint) {
+      display: flex;
+      align-items: center;
+    }
   }
 
   &__slogan {
@@ -98,7 +104,7 @@
     flex: 1;
     text-align: center;
 
-    @include medium {
+    @include breakpoint($footer_bottom_breakpoint) {
       text-align: right;
     }
   }

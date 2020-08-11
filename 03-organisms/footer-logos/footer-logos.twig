@@ -1,0 +1,27 @@
+{% set footer_logos_base_class = "footer-logos" %}
+
+{% set logos = {
+  0: {
+    logo_src: logo_path is empty ? './logo-element-solutions.png' : logo_path ~ '/logo-element-solutions.png',
+    logo_url: 'https://google.ca'
+  },
+  1: {
+    logo_src: logo_path is empty ? './logo-macdermid-alpha.png' : logo_path ~ '/logo-macdermid-alpha.png',
+    logo_url: 'https://google.ca'
+  },
+  2: {
+    logo_src: logo_path is empty ? './logo-macdermid-enthone.png' : logo_path ~ '/logo-macdermid-enthone.png',
+    logo_url: 'https://google.ca'
+  }
+} %}
+
+<div {{ bem(footer_logos_base_class, [], footer_logos_blockname) }}>
+  {% for logo in logos %}
+    {% include "@atoms/images/image/figure.twig" with {
+      image_url: logo.logo_url,
+      image_src: logo.logo_src,
+      image_figure_blockname: footer_logos_base_class,
+      image_figure_base_class: 'logo'
+    } %}
+  {% endfor %}
+</div>
