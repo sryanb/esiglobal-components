@@ -2,27 +2,32 @@
   &__menu {
     @include list-reset;
 
-    display: flex;
-    align-items: center;
+    @include medium {
+      display: flex;
+      align-items: center;
+    }
 
     &__item {
       display: flex;
-      align-items: center;
+
+      @include medium {
+        align-items: center;
 
       // Vertical line separators.
-      &:not(:last-child) {
-        &::before {
-          content: '';
-          display: block;
-          width: 1px;
-          height: 10px;
-          background: $gray-light;
+        &:not(:last-child) {
+          &::before {
+            content: '';
+            display: block;
+            width: 1px;
+            height: 10px;
+            background: $gray-light;
+          }
         }
-      }
 
-      &:first-child {
-        &::before {
-          display: none;
+        &:first-child {
+          &::before {
+            display: none;
+          }
         }
       }
     }
@@ -30,13 +35,14 @@
     &__link {
       color: clr(text-inverse);
       display: block;
-      font-size: 0.8rem;
+      font-size: 1rem;
       line-height: 1;
-      padding: $space $space-one-half;
+      padding: $space 0;
       text-decoration: none;
       font-weight: 400;
 
       @include medium {
+        font-size: 0.8rem;
         padding: $space;
         border-bottom: none;
         display: inline-block;
@@ -54,6 +60,11 @@
 
     &__item:last-child a {
       background: clr(accent);
+      margin-top: $space-one-half;
+
+      @include medium {
+        margin-top: 0;
+      }
 
       &:hover {
         color: clr(text-inverse);
