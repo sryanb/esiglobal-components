@@ -28,7 +28,7 @@
 
     &--featured {
       flex-direction: column;
-      align-items: flex-end;
+      align-items: flex-start;
 
       @include large {
         flex-direction: row;
