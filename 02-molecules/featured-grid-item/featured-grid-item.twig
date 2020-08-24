@@ -59,7 +59,7 @@
 
     <div {{ bem('gradient', featured_grid_item_modifiers, featured_grid_item_base_class) }}></div>
 
-    <div {{ bem('image', [], featured_grid_item_base_class) }}>
+    <div {{ bem('image', featured_grid_item_modifiers, featured_grid_item_base_class) }}>
       {% block image %}
         {% include "@atoms/images/image/responsive-image.twig" with {
           output_image_tag: true,

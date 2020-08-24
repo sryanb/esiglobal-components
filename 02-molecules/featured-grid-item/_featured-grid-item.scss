@@ -182,9 +182,15 @@
 
     img {
       width: 100%;
-      min-height: 600px;
+      min-height: 300px;
       transition: transform .5s;
       object-fit: cover;
+    }
+
+    &--featured {
+      img {
+        min-height: 524px;
+      }
     }
   }
 
