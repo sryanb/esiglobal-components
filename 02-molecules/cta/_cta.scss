@@ -13,7 +13,7 @@
     clip-path: polygon(66% 14%, 100% 0, 100% 100%, 0 100%, 0 0);
     display: flex;
     align-items: flex-end;
-    padding: $space-triple;
+    padding: $space-quadruple $space-triple;
     text-align: left;
   }
 
@@ -38,6 +38,7 @@
   &__h2 {
     font-size: 2rem;
     margin: 0 0 $space 0;
+    line-height: 1.3;
   }
 
   &__link {
