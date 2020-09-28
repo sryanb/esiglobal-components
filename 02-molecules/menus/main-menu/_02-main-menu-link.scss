@@ -4,14 +4,13 @@
   display: block;
   font-size: 1rem;
   line-height: 1.5;
-  padding: $space $space-triple $space $space-double;
   text-decoration: none;
   font-weight: 600;
 
   @include medium {
     border-bottom: none;
     display: inline-block;
-    padding: $space $space-double;
+    padding: $space 1.5rem;
     text-transform: none;
     position: relative;
     width: auto;
@@ -23,7 +22,7 @@
     }
   }
 
-  @include large {
-    padding: $space space-double;
+  @include breakpoint(1365px) {
+    padding: $space $space-double;
   }
 }
