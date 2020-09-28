@@ -1,0 +1,70 @@
+.vertical-menu {
+  $self: &;
+
+  &__handle {
+    margin-top: 0;
+    display: flex;
+    align-items: center;
+
+    @include large {
+      display: block;
+    }
+  }
+
+  ul {
+    @include list-reset;
+
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin-bottom: $space-double;
+
+    @include large {
+      margin-bottom: 0;
+    }
+  }
+
+  li {
+    margin-bottom: 5px;
+    padding-left: 0;
+  }
+
+  a {
+    flex: 1;
+    display: block;
+    color: clr(text);
+    text-decoration: none;
+
+    &:hover {
+      color: clr(accent);
+    }
+  }
+
+  // Inverse modifier.
+  &--inverse {
+    #{$self}__handle {
+      color: clr(text-inverse);
+    }
+
+    a {
+      color: clr(text-inverse);
+
+      &:hover {
+        color: $gray-lighter;
+      }
+    }
+  }
+
+  // Underlines Modifier.
+  &--underlines {
+    a {
+      border-bottom: 1px solid $gray;
+      padding: 5px 0;
+    }
+
+    h3 a {
+      border-bottom: none;
+      padding: 0;
+    }
+  }
+}

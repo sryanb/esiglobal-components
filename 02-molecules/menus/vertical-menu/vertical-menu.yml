@@ -1,0 +1,10 @@
+vertical_menu_title: "Menu Title"
+vertical_menu_items:
+  - title: "vertical Link"
+    url: "#"
+  - title: "vertical Link"
+    url: "#"
+  - title: "vertical Link"
+    url: "#"
+  - title: "vertical Link"
+    url: "#"
