@@ -89,6 +89,7 @@
   }
 
   &__title {
+    @include heading-medium($color: clr(text-inverse));
     width: 100%;
     margin-bottom: 0;
     position: relative;

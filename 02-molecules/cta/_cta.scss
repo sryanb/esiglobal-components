@@ -10,10 +10,10 @@
   text-align: center;
 
   @include xl {
-    clip-path: polygon(66% 14%, 100% 0, 100% 100%, 0 100%, 0 0);
+    clip-path: polygon(66% 11%, 100% 0, 100% 100%, 0 100%, 0 0);
     display: flex;
     align-items: flex-end;
-    padding: $space-quadruple $space-triple;
+    padding: $space-quintuple $space-triple;
     text-align: left;
   }
 
@@ -68,7 +68,7 @@
     clip-path: polygon(100% 0, 100% 100%, 66% 97%, 0 100%, 0 0);
 
     @include xl {
-      clip-path: polygon(100% 0, 100% 100%, 66% 86%, 0 100%, 0 0);
+      clip-path: polygon(100% 0, 100% 100%, 66% 89%, 0 100%, 0 0);
     }
   }
 }

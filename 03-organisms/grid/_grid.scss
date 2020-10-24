@@ -7,6 +7,13 @@
 .grid {
   @include grid;
 
+  &__title {
+    font-size: 1.5rem;
+    margin-top: 0;
+    margin-bottom: 2rem;
+    border-bottom: 1px solid #ccc;
+  }
+
   &--card {
     @include space-stack-page;
   }
