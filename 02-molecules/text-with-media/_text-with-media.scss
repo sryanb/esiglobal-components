@@ -24,6 +24,13 @@
     }
   }
 
+  &__caption {
+    font-size: 12px;
+    background: #fff;
+    padding: 3px;
+    line-height: 1.2;
+  }
+
   &__text {
    border-top: 10px solid clr(primary-dark);
    padding-top: $space;
@@ -58,4 +65,37 @@
       order: 1;
     }
   }
+
+  &--contained {
+    align-items: flex-start;
+
+    @include large {
+      margin-left: 250px;
+      padding: 0 4rem;
+      flex-direction: column;
+    }
+
+    @include xl {
+      margin-left: 315px;
+      padding: 0 8rem;
+    }
+
+    @include max-width {
+      flex-direction: row;
+    }
+
+    #{$self}__media {
+      margin-right: $space-double;
+      width: 100%;
+      margin-bottom: $space;
+
+      @include max-width {
+        width: auto;
+      }
+    }
+  }
+}
+
+.page-intro + .text-with-media {
+  margin-top: $space-double;
 }

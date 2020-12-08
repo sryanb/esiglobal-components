@@ -8,6 +8,10 @@
   {% set text_with_media_modifiers = text_with_media_modifiers|merge(['reverse']) %}
 {% endif %}
 
+{% if text_with_media_containment == "Contained" %}
+  {% set text_with_media_modifiers = text_with_media_modifiers|merge(['contained']) %}
+{% endif %}
+
 <div {{ bem(text_with_media_base_class_var, text_with_media_modifiers, text_with_media_blockname, text_with_media_extra_classes) }}>
   <div {{ bem('media', text_with_media_media_modifiers, text_with_media_base_class_var) }}>
     {% block media %}
@@ -17,6 +21,9 @@
         responsive_image_blockname: text_with_media_base_class_var
       } %}
     {% endblock %}
+    {% if text_with_media_caption is not empty %}
+      <div {{ bem('caption', [], text_with_media_base_class_var) }}>{{ text_with_media_caption }}</div>
+    {% endif %}
   </div>
   <div {{ bem('text', [], text_with_media_base_class_var) }}>
     {% block text %}
