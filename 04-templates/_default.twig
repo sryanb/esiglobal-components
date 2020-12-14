@@ -36,6 +36,15 @@
       </div>
 
       {% block page_footer %}
+        {# CTA #}
+        {% include "@molecules/cta/cta.twig" with {
+          cta_heading: 'Lorem Ipsum CTA',
+          cta_subheading: 'Donec sed odio dui. Praesent commodo cursus magna, vel scelerisque nisl consectater et. Curabitur blandit tempus porttitor.',
+          cta_modifiers: ['secondary', 'no-margin']
+        } %}
+
+        {# Newsletter CTA #}
+        {% include "@esauto_molecules/newsletter-cta/newsletter-cta.twig" %}
         {% include "@organisms/site/site-footer/site-footer.twig" %}
       {% endblock %}
     </main>
