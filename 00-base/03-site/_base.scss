@@ -16,7 +16,7 @@ body {
 }
 
 .main {
-  @include wrapper;
+  // @include wrapper;
 
   display: block; /* Fix for IE weirdness */
   margin-bottom: 0 !important
