@@ -10,7 +10,6 @@
 
   <div {{ bem(main_base_class, main_modifiers, main_blockname) }}>
     <a id="main-content" tabindex="-1"></a>{# link is in html.html.twig #}
-
     <main role="main" {{ bem(main_content_base_class, main_content_modifiers, main_content_blockname) }}>
       <div {{ bem('site-top', [], main_content_base_class) }}>
         {% block page_header_top %}
@@ -32,7 +31,9 @@
       </div>
 
       <div {{ bem('content', [], main_content_base_class) }}>
-        {% block page_content %}{% endblock %}
+        <div class="wrapper">
+          {% block page_content %}{% endblock %}
+        </div>
       </div>
 
       {% block page_footer %}
