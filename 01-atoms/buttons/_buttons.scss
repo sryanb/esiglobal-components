@@ -20,6 +20,10 @@
     color: clr(text-inverse);
     text-decoration: none;
   }
+
+  .ext {
+    display: none;
+  }
 }
 
 @mixin secondary {
