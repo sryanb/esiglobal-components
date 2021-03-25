@@ -12,7 +12,7 @@
 }
 
 .text-long {
-  a {
+  a:not(.button) {
     @include link;
 
     &:hover {
