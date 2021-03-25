@@ -2,22 +2,130 @@
   $self: &;
 
   width: 100%;
-  background-color: clr(primary);
+  background-color: #231f20;
   color: clr(text-inverse);
-  padding: $space-double;
+  padding: $space-double $space 0;
+
+  // Footer Menu Styling
+  .menu {
+    @include list-reset;
+
+    a {
+      display: block;
+      color: #949699;
+      text-decoration: none;
+      margin: 10px 0;
+
+      &:hover {
+        color: clr(accent);
+      }
+    }
+
+    > li > span {
+      display: block;
+      font-size: 1.2rem;
+      font-weight: bold;
+
+      @include breakpoint(1223px) {
+        margin-bottom: $space;
+      }
+    }
+
+    .menu--sub {
+      display: none;
+
+      @include breakpoint(1223px) {
+        display: block !important;
+      }
+    }
+  }
+
+  #block-footercompany,
+  .footer__businesses {
+    margin-bottom: $space-double;
+
+    &:last-child {
+      margin-bottom: $space;
+    }
+
+    > ul {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+
+      @include breakpoint(1440px) {
+        flex-direction: row;
+      }
+
+      > li {
+        margin-bottom: $space;
+        padding-bottom: $space;
+        border-bottom: 1px solid #333;
+        position: relative;
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+
+        @include breakpoint(1223px) {
+          border-bottom: none;
+          margin-bottom: $space;
+          padding-bottom: $space;
+        }
+
+        @include breakpoint(1440px) {
+          margin-bottom: 0;
+        }
+
+        .expand-sub {
+          position: absolute;
+          right: 0;
+          top: 5px;
+          width: 20px;
+          height: 20px;
+          background: transparent url('/themes/custom/esitheme/images/icons/menu-expand.svg') no-repeat;
+          background-size: cover;
+
+          &:after {
+            display: none;
+          }
+
+          @include breakpoint(1223px) {
+            display: none;
+          }
+        }
+      }
+    }
+  }
 
   &__inner {
+    @include esauto-wrapper($container-max-width: 1824px, $v-padding: 60px);
+
+    padding-bottom: 100px;
+
     @include xl {
       display: flex;
+      justify-content: space-between;
     }
   }
 
   &__branding {
-    flex-basis: 25%;
+    flex-basis: 33.3333%;
     margin-bottom: $space-double;
+    text-align: center;
 
     @include xl {
+      flex-basis: 25%;
       margin-bottom: 0;
+    }
+
+    .block {
+      display: flex;
+      justify-content: center;
+
+      @include medium {
+        justify-content: flex-start;
+      }
     }
 
     img {
@@ -25,71 +133,57 @@
     }
   }
 
-  &__menus {
-    @include medium {
-      display: flex;
+  &__middle {
+    flex-basis: 33.3333%;
+
+    @include breakpoint(1440px) {
       flex-basis: 50%;
-    }
-
-    h2 {
-      font-size: 1.2rem;
-      color: clr(text-inverse);
-      margin-bottom: $space;
-      margin-top: 0;
-    }
-
-    a {
-      @include link(clr(text-inverse), clr(secondary-light));
-    }
-
-    ul {
-      height: 150px;
-    }
-
-    > div {
-      flex: 1;
-      margin-bottom: $space-double;
-
-      @include xl {
-        margin-bottom: 0;
-
-      }
-    }
-
-    .views-row {
-      margin-bottom: 5px;
-    }
-
-    .vertical-menu__handle {
-      display: none;
-    }
-
-    ul {
-      margin-bottom: 0;
+      padding: 0 150px;
     }
   }
 
-  &__info {
-    flex-basis: 25%;
+  &__businesses {
+    flex-basis: 33.3333%;
+    flex-shrink: 0;
 
-    #{$self}__phone a {
-      text-decoration: none;
-      font-size: 2rem;
-      font-weight: 600;
-      color: clr(text-inverse);
+    @include breakpoint(1440px) {
+      flex-basis: 25%;
     }
 
-    #{$self}__email {
-      margin-bottom: $space;
+    a {
+      display: flex;
+      align-items: center;
 
-      a {
-        text-decoration: none;
-        color: clr(text-inverse);
+      svg.ext {
+        display: none;
+      }
+
+      &::before {
+        content: '';
+        display: inline-block;
+        width: 16px;
+        height: 17px;
+        margin-right: $space-one-half;
+        background: transparent url('/themes/custom/esitheme/images/icons/extlink.svg') no-repeat;
       }
     }
+  }
 
-    #{$self}__copy {
-      color: $gray-lighter;
+  &__copy {
+    color: #949699;
+    margin-bottom: 20px;
+    font-size: 0.9rem;
+    padding-top: $space-double;
+    border-top: 1px solid #333;
+
+    &.hide-mobile {
+      display: none;
+    }
+
+    &.hide-desktop {
+      @include breakpoint(1223px) {
+        display: block;
+      }
     }
   }
 
@@ -118,3 +212,38 @@
     }
   }
 }
+
+// .footer .vertical-menu {
+//   width: 100%;
+//   border-bottom: 1px solid gray;
+//   margin-right: 0;
+
+//   @include xl {
+//     border-bottom: none;
+//   }
+
+//   .vertical-menu__ul {
+//     display: none;
+
+//     @include xl {
+//       display: block;
+//     }
+//   }
+
+//   .vertical-menu__handle {
+//     display: flex;
+
+//     &::after {
+//       content: '';
+//       display: block;
+//       width: 20px;
+//       height: 20px;
+//       background: transparent url('../images/icons/menu-expand.svg') no-repeat;
+//       background-size: cover;
+
+//       @include xl {
+//         display: none;
+//       }
+//     }
+//   }
+// }
