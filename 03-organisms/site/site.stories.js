@@ -53,7 +53,7 @@ export const header = () => {
 export const footer = () => (
   <div
     dangerouslySetInnerHTML={{
-      __html: siteFooter(footerMenuData),
+      __html: siteFooter({...footerMenuData}),
     }}
   />
 );
