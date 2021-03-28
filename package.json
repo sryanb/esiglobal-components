@@ -1,6 +1,6 @@
 {
-  "_from": "esiglobal-components@^1.6.6",
-  "_id": "esiglobal-components@1.6.6",
+  "_from": "esiglobal-components@^1.7.6",
+  "_id": "esiglobal-components@1.7.6",
   "_inBundle": false,
   "_integrity": "sha512-vowikN40tc1LAAx1/HEHFzlVz/Zbv6105z5qcoUvRGfkTepANgAtxwPlXN5nFp60CPpYBVzRWKTYLpA0nJErEQ==",
   "_location": "/esiglobal-components",
@@ -8,19 +8,19 @@
   "_requested": {
     "type": "range",
     "registry": true,
-    "raw": "esiglobal-components@^1.6.6",
+    "raw": "esiglobal-components@^1.7.6",
     "name": "esiglobal-components",
     "escapedName": "esiglobal-components",
-    "rawSpec": "^1.6.6",
+    "rawSpec": "^1.7.6",
     "saveSpec": null,
-    "fetchSpec": "^1.6.6"
+    "fetchSpec": "^1.7.6"
   },
   "_requiredBy": [
     "/"
   ],
-  "_resolved": "https://registry.npmjs.org/esiglobal-components/-/esiglobal-components-1.6.6.tgz",
+  "_resolved": "https://registry.npmjs.org/esiglobal-components/-/esiglobal-components-1.7.6.tgz",
   "_shasum": "8678531c5f5f1be398c3cb91d2a19763c885215d",
-  "_spec": "esiglobal-components@^1.6.6",
+  "_spec": "esiglobal-components@^1.7.6",
   "_where": "/Users/sbell/Sites/esiauto/docroot/themes/custom/esitheme",
   "author": "",
   "bugs": {
@@ -45,5 +45,5 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "version": "1.7.5"
+  "version": "1.7.6"
 }
